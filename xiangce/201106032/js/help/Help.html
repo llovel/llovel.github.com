@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Zoom Wheel [XML Gallery]</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FF3366}
+.style2 {color: #FFFFFF}
+.style4 {
+	color: #9F9F9F;
+	font-size: xx-small;
+}
+.style5 {
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1 class="style1">Zoom Wheel</h1>
+	  <h2>XML gallery<br />
+	    <br />
+	        <span class="style4">by mrgulabull</span></h2>
+  </div>
+	<div id="menu">
+		
+	</div>
+</div>
+<div id="content">
+	<div id="colOne">
+		<div class="post">
+			<h2 class="title">Overview</h2>
+			<h3 class="posted">what it is and does</h3>
+			<div class="story">
+				<p><em><strong>Zoom Wheel XML Gallery</strong></em> was inspired by the wonderfully innovative gallery at <a href="http://www.dvein.com/">DVEIN</a>. This gallery has been coded from scratch to be smooth performing, simple to edit, and intuitive to navigate.</p>
+				<p><em><strong>Zoom Wheel XML Gallery</strong></em> currently boasts the following features:</p>
+				<ul>
+					<li><span class="style1">Performance</span> - Framerates remain silky smooth whether there are 10 images in your gallery or 200.</li>
+					<li><span class="style1">XML Managed</span> - All thumb images, full sized images, and text can be changed through a simple XML file.</li>
+                    <li><span class="style1">Light Weight</span> - Published SWF size of about  37KB.</li>
+                    <li><span class="style1">Compatibility</span> - Coded in AS2, opens with Flash 8+. Backwards compatible from Flash Player 8 all the way to Flash Player 10 beta.</li>
+                    <li><span class="style1">TweenMax Driven</span> - Unparralled tweening performance and flexibility.</li>
+					<li><span class="style1">Dynamic Image Sizing</span> - Regardless of your full images size - tall, wide, big or small - it will be intelligently formatted to fit the users screen.</li>
+					<li><span class="style1">Fluid Layout</span> - All gallery elements are dynamically aligned and centered no matter what size the browser window may be.</li>
+                    <li><span class="style1">Mouse Wheel Navigation</span> - Spin the image wheel with your mouse wheel for even quicker browsing.</li>
+				</ul>
+		  </div>
+	  <div class="meta">
+				<p>&nbsp;</p>
+		  </div>
+		</div>
+		<div class="post">
+			<h2 class="title">what you need</h2>
+		  <h3 class="posted">and things to keep in mind</h3>
+	  <div class="story">
+				<p><em><strong>Zoom Wheel XML Gallery</strong></em> makes use of the freely available <a href="http://blog.greensock.com/tweenmaxas2/">TweenMax</a> and <a href="http://blog.greensock.com/tweenmaxas2/">PreloadAssetManager</a> classes by <a href="http://blog.greensock.com/">GreenSock</a>. Both are included with this package for simplicity. Note however, that the version of PreloadAssetManager that is included is specially modified, so this file cannot be changed (it has been modified to provide a progress check without the typical delay associated with the trackProgress:boolean).</p>
+				<p>The font <a href="http://www.fontsmith.com/purchasing.php?buy=1&amp;font_num=171">FS-IngridBold</a>, by FontSmith is used in the demonstration. This font is NOT free, but is <a href="http://www.fontsmith.com/purchasing.php?buy=1&amp;font_num=171">available for purchase</a>. A great alternative is 'Trebuchet MS - Bold' which is preinstalled on most computers.</p>
+		<p><em><strong>Zoom Wheel XML Gallery</strong></em>   aligns its elements according to the Stage width and height, this is also known as a fluid layout. In order for the fluid layout to work, you need to embed the SWF at 100% browser width and height, and set the alignment to 'TL' (Top Left). Take a look at the sample index.html to see how this was done using swfObject. If you are loading the gallery SWF into your main SWF, the main SWF needs to be embedded in this same manner.</p>
+		<p>The gallery SWF is very compact at only 37KB. Since this small amount of data can be loaded almost instantly, there is no preload animation for the gallery SWF. If you decide to build the rest of your website within the gallery SWF, you may want to consider implementing a preloader depending upon the increase in size.</p>
+		</div>
+	  <div class="meta">
+				<p>&nbsp;</p>
+		  </div>
+		</div>
+        <div class="post">
+			<h2 class="title">variables</h2>
+		  <h3 class="posted">simple tweaks</h3>
+	  <div class="story">
+				<p><em><strong>Zoom Wheel XML Gallery</strong></em> has a number of variables available which can be changed to easily tweak the look of the gallery. I welcome any suggestions for this list.</p>
+				<p>The following variables can be found on the '<span class="style1">AS variables</span>' layer :</p>
+				<ul>
+					<li><span class="style1">damp</span> - <span class="style2">.9</span> - Resistance when spinning wheel. Decimal values between 0 and 1 are acceptable. 0 stops immediately, 1 spins forever.</li>
+					<li><span class="style1">recSizeX</span> - <span class="style2">229</span> - Width of thumb images.</li>
+					<li><span class="style1">recSizeY</span> - <span class="style2">131</span> - Height of thumb images.</li>
+                    <li><span class="style1">smallThumbScale</span> - <span class="style2">.57</span> - Scale of inactive thumbs.</li>
+                    <li><span class="style1">posZ</span> - <span class="style2">130</span> - Wheel radius.</li>
+                    <li><span class="style1">posZ2</span> - <span class="style2">170</span> - Wheel radius for expanded category.</li>
+                    <li><span class="style1">enlargedSpread</span> - <span class="style2">40</span> - Spacing between images of a selected category. Lower numbers mean more space.</li>
+				</ul>
+		  </div>
+	  <div class="meta">
+				<p>&nbsp;</p>
+		  </div>
+		</div>
+        <div class="post">
+			<h2 class="title">faq</h2>
+		  <h3 class="posted">and answers to them</h3>
+	  <div class="story">
+				<p><em><strong>&quot;I just finished changing all the thumb images but they look squashed now.</strong></em> What Gives?&quot;</p>
+				<blockquote class="style1">Make sure your thumb jpeg's are of the same proportions as the recSizeX and recSizeY variables. If they aren't, you can either go back and change your image sizes to match the recSizeX and recSizeY variables, OR you can change the recSizeX and recSizeY variables to match the proportions of your image.</blockquote>
+				<p><em><strong>&quot;I've loaded this gallery into my own SWF, but now the gallery isn't aligned properly.</strong></em>&quot;</p>
+				<blockquote class="style1">This is a fluid gallery so it needs a couple things in order to intelligently align to the browser window:</blockquote>
+				<blockquote class="style1">1. Check your HTML file to make sure your main SWF is embedded for 100% browser Width and Height, and that it is aligned 'TL' (Top Left).</blockquote>
+				<blockquote class="style1">2. Make sure that the movieClip you are loading the gallery into has X and Y coordinates of 0, 0.</blockquote>
+				<p><em><strong>&quot;Can I request a feature?</strong></em>&quot;</p>
+				<blockquote class="style1">Of course! I'm looking to expand and improve this gallery so your input is highly appreciated. Naturally I can't implement every feature requested, but they will be considered.</blockquote>
+				<p class="style1">&nbsp;</p>
+	  </div>
+	  <div class="meta">
+		  </div>
+		</div>
+	</div>
+	<div id="colTwo">
+		<ul>
+			<li>
+				<h2>special thanks</h2>
+				<ul>
+					<li><a href="http://www.dvein.com">DVEIN</a> - Inspiration</li>
+					<li><a href="http://blog.greensock.com/">GreenSock</a> - Essential Classes</li>
+                    <li><a href="http://www.flashden.net/">FlashDen</a> - Flash Marketplace</li>
+				</ul>
+		  </li>
+			<li>Only available at
+			  <ul>
+					<li><a href="http://www.flashden.net/" class="style5">FlashDen.net</a></li>
+			    </ul>
+		  </li>
+	  </ul>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright &copy; 2008 <span class="style1"><a href="http://www.flashden.net/user/mrgulabull">Mrgulabull</a></span> (Scott Bull).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Author" content="懒人图库" />
+<meta name="keywords" content="JS代码,相册代码,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为横向的JS相册效果，属于站长常用代码，更多相册代码代码请访问懒人图库JS代码频道。" />
+<title>横向的JS相册效果_懒人图库</title>
+<style>
+body {background:#000;margin:0;font:12px Verdana;text-align:center;}
+#tbody {width:650px;margin:20px auto;text-align:left;}
+#mainbody {width:640px;margin:5px;border:1px solid #222;padding:1px}
+#mainphoto {cursor:pointer;display:block;}
+#goleft {float:left;clear:left;margin:6px 5px 0 3px;}
+#goright {float:right;clear:right;margin:6px 3px 0 5px;}
+#photos {width:610px;height:54px;line-height:54px;border:1px solid #222;margin:10px 0;overflow:hidden;}
+#showArea img {display:block;float:left;margin:1px 0;cursor:pointer;border:1px solid #222}
+.txt_1 {font:bold 24px Verdana, Tahoma;color:#fff;}
+</style>
+</head>
+<body>
+<div id="tbody"><span class="txt_1">横向的JS相册效果</span>
+    <div id="mainbody">
+      <img src="images/01.jpg" alt="懒人图库" width="640" height="400" id="mainphoto" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+    </div>
+    <img src="images/goleft.gif" width="11" height="56" id="goleft" />
+    <img src="images/goright.gif" width="11" height="56" id="goright" />
+    <div id="photos">
+      <div id="showArea">
+        <!--
+          SRC: 缩略图地址
+          REL: 大图地址
+          NAME: 网址
+        -->
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/02.jpg" alt="懒人图库" width="80" height="50" rel="images/02.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/02.jpg" alt="懒人图库" width="80" height="50" rel="images/02.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/02.jpg" alt="懒人图库" width="80" height="50" rel="images/02.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/02.jpg" alt="懒人图库" width="80" height="50" rel="images/02.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/02.jpg" alt="懒人图库" width="80" height="50" rel="images/02.jpg" name="http://www.lanrentuku.com" />
+        <img src="images/01.jpg" alt="懒人图库" width="80" height="50" rel="images/01.jpg" name="http://www.lanrentuku.com" />
+      </div>
+    </div>
+</div>
+
+<table width="900" height="176" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="176" style="
+	color:#FFFFFF"><p align="center">代码整理：懒人图库　</p>
+      <p align="center">＊尊重他人劳动成果，转载请自觉注明出处！</p>
+      <p align="center"><br />
+        </p>
+      <p align="center"><p>横向的JS相册效果</p></p>
+    <p align="center"></p></td>
+  </tr>
+</table>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+var browse = window.navigator.appName.toLowerCase();
+var MyMar;
+var speed = 1; //速度，越大越慢
+var spec = 1; //每次滚动的间距, 越大滚动越快
+var minOpa = 50; //滤镜最小值
+var maxOpa = 100; //滤镜最大值
+var spa = 2; //缩略图区域补充数值
+var w = 0;
+spec = (browse.indexOf("microsoft") > -1) ? spec : ((browse.indexOf("opera") > -1) ? spec*10 : spec*20);
+function $(e) {return document.getElementById(e);}
+function goleft() {$('photos').scrollLeft -= spec;}
+function goright() {$('photos').scrollLeft += spec;}
+function setOpacity(e, n) {
+    if (browse.indexOf("microsoft") > -1) e.style.filter = 'alpha(opacity=' + n + ')';
+    else e.style.opacity = n/100;
+}
+$('goleft').style.cursor = 'pointer';
+$('goright').style.cursor = 'pointer';
+$('mainphoto').onmouseover = function() {setOpacity(this, maxOpa);}
+$('mainphoto').onmouseout = function() {setOpacity(this, minOpa);}
+$('mainphoto').onclick = function() {location = this.getAttribute('name');}
+$('goleft').onmouseover = function() {this.src = 'images/goleft2.gif'; MyMar=setInterval(goleft, speed);}
+$('goleft').onmouseout = function() {this.src = 'images/goleft.gif'; clearInterval(MyMar);}
+$('goright').onmouseover = function() {this.src = 'images/goright2.gif'; MyMar=setInterval(goright,speed);}
+$('goright').onmouseout = function() {this.src = 'images/goright.gif'; clearInterval(MyMar);}
+window.onload = function() {
+    setOpacity($('mainphoto'), minOpa);
+    var rHtml = '';
+    var p = $('showArea').getElementsByTagName('img');
+    for (var i=0; i<p.length; i++) {
+        w += parseInt(p[i].getAttribute('width')) + spa;
+        setOpacity(p[i], minOpa);
+        p[i].onclick = function() {location = this.getAttribute('name');}
+        p[i].onmouseover = function() {
+            setOpacity(this, maxOpa);
+            $('mainphoto').src = this.getAttribute('rel');
+            $('mainphoto').setAttribute('name', this.getAttribute('name'));
+            setOpacity($('mainphoto'), maxOpa);
+        }
+        p[i].onmouseout = function() {
+            setOpacity(this, minOpa);
+            setOpacity($('mainphoto'), minOpa);
+        }
+        rHtml += '<img src="' + p[i].getAttribute('rel') + '" width="0" height="0" alt="" />';
+    }
+    $('showArea').style.width = parseInt(w) + 'px';
+    var rLoad = document.createElement("div");
+    $('photos').appendChild(rLoad);
+    rLoad.style.width = "1px";
+    rLoad.style.height = "1px";
+    rLoad.style.overflow = "hidden";
+    rLoad.innerHTML = rHtml;
+}
+</script>
